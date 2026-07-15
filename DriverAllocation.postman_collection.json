@@ -1,0 +1,172 @@
+{
+  "info": {
+    "_postman_id": "7ba60cf7-e014-4e52-b4b9-cd6d10de2ae9",
+    "name": "DriverAllocation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "27260762"
+  },
+  "item": [
+    {
+      "name": "RegisterDrivers",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\":\"Rohit\",\r\n    \"phone\":\"7777777777\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/drivers/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "drivers",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateDriverLocation",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"driverId\":\"6a5759b4982b1a74faf6f32d\",\r\n    \"latitude\":13.1000,\r\n    \"longitude\":77.9000\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/drivers/location",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "drivers",
+            "location"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateDriverStatus",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"driverId\":\"6a575225bc66463bdd80c857\",\r\n    \"status\":\"ONLINE\",\r\n    \"isAvailable\":true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/drivers/status",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "drivers",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "RiderRequest",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"riderId\":\"6a575629488159cb9664e67b\",\r\n    \"latitude\":12.9716,\r\n    \"longitude\":77.5946\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/rides/request",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "rides",
+            "request"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DriverAcceptRequest",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"rideId\":\"6a575dce87854e860186c9e7\",\r\n    \"driverId\":\"6a5759a4982b1a74faf6f32b\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/rides/accept",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "rides",
+            "accept"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
